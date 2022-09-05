@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+* {
+    font-family: Lato;
+
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}
+nav {
+    background-color: #212529;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+nav > .title {
+    padding: 1rem 0.5rem;
+    font-size: 1.25rem;
+}
+nav > a.source-link {
+    padding: 1rem 0.5rem;
+    color: #dee2e6;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+nav > a.source-link:hover {
+    color: #FFFFFF;
+    background-color: rgba(255,255,255,0.2);
+}
+nav > a.source-link > svg {
+    height: 2em;
+    vertical-align: middle;
+}
+
+main {
+    margin: 1rem;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+table > thead > tr > th {
+    border-bottom: 2px solid #212529;
+    text-align: left;
+    padding: 0.5rem;
+}
+table > tbody > tr > td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+table > tbody > tr:nth-of-type(odd) > td {
+    background-color: #f8f9fa;
+}
+table > tbody > tr:hover > td {
+    background-color: #dee2e6 ;
+}
+.opacity-50 {
+    opacity: 0.5;
+}

@@ -9,19 +9,18 @@ use app\Helpers;
 
 ?>
 
-<div class="table-responsive">
-    <table class="table table-striped mb-0">
+    <table>
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Type</th>
-                <th scope="col">Supplier</th>
+                <th>#</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Supplier</th>
             </tr>
         </thead>
-        <tbody class="table-group-divider">
+        <tbody>
             <?php foreach ($data as $index => $product) { ?>
                 <tr>
                     <td><?= ($index + 1) ?></td>
@@ -34,4 +33,3 @@ use app\Helpers;
             <?php } ?>
         </tbody>
     </table>
-</div>
