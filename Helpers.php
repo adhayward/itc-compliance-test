@@ -41,9 +41,15 @@ class Helpers
      * @param string $default The value displayed for blank fields
      * @return string The sanitised string
      */
-    public static function sanitiseString($value, string $default = '<em class="text-secondary">N/A</em>') :string {
+    public static function sanitiseString($value, string $default = '<em class="opacity-50">N/A</em>') :string {
         if (is_array($value)) {
-            return implode(", ", array_map(function($v) {return static::sanitiseString($v);}, $value));
+            if (count($value)) {
+                return implode(", ", array_map(function ($v) {
+                    return static::sanitiseString($v);
+                }, $value));
+            } else {
+                return $default;
+            }
         }
         if ($value) {
             return htmlentities($value);
