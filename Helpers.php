@@ -70,7 +70,7 @@ class Helpers {
      * @param integer|bool $retry Retry counter - set to false to prevent retries
      * @return stdClass The decoded response data
      */
-    public static function queryApi(string $method, Array $data, $retry = 0) : stdClass {
+    public static function queryApi(string $method, Array $data = [], $retry = 0) : stdClass {
         
         try {
             $response = static::getClient()->request('GET', $method, ['query' => $data]);
