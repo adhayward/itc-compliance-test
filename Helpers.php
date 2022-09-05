@@ -8,7 +8,8 @@ use stdClass;
 /**
  * Helper methods for use in this application
  */
-class Helpers {
+class Helpers 
+{
     /**
      * Render a view file with the given parameters
      *
